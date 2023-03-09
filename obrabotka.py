@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 #загрузка данных
 
-DF_train = pd.read_csv('', delimiter =',', index_col = 0)
+DF_train = pd.read_csv('',delimiter =',', index_col = 0)
 DF_test = pd.read.csv('',delimiter =',', index_col = 0)
 Target = pd.read_csv('',delimiter =',', index_col = 0)
 
