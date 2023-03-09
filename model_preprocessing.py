@@ -4,16 +4,16 @@ import matplotlib.pyplot as plt
 
 #загрузка данных
 
-DF_train = pd.read_csv('',delimiter =',', index_col = 0)
-DF_test = pd.read.csv('',delimiter =',', index_col = 0)
-Target = pd.read_csv('',delimiter =',', index_col = 0)
+DF_train = read_csv('', delimiter =',', index_col = 0)
+DF_test = read.csv('', delimiter =',', index_col = 0)
+Target = read_csv('', delimiter =',', index_col = 0)
 
 #удаление дубликатов, объединение DF
 
 DF_train.drop_duplicates(inplace = True)
 
-DF_total = pd.concat([DF_train, DF_test])
-DF_films = pd.concat([Target, Submission])
+DF_total = concat([DF_train, DF_test])
+DF_films = concat([Target, Submission])
 DF_total = DF_total.join(DF_films)
 
 #Анализ данных
