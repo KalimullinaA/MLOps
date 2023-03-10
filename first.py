@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-dataframe = pd.read_csv(r"C:\Users\Admin\Documents\GitHub\MLOps\data\IMDB Top 250 Movies.csv")
+dataframe = pd.read_csv(r"C:/MLOps/IMDB Top 250 Movies.csv")
 print(dataframe)
 
 train, test = train_test_split(dataframe, test_size=0.2)
@@ -10,5 +10,5 @@ train, test = train_test_split(dataframe, test_size=0.2)
 # print(len(val), 'validation examples')
 # print(len(test), 'test examples')
 
-train[['name','year','rating','genre','run_time','casts']].to_csv('data_train.csv',index=False)
-test[['name','year','genre','run_time','casts']].to_csv('data_test.csv',index=False)
+train[['name','year','rating','genre','run_time','casts', 'budget']].to_csv('data_train.csv',index=False)
+test[['name','year','genre','run_time','casts', 'budget']].to_csv('data_test.csv',index=False)
